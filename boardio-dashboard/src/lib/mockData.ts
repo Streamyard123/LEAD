@@ -437,10 +437,20 @@ export const boxplotData = [
 
 // ─── KPI Data ───
 export const kpiData = [
-  { label: "Total Revenue", value: "$284,500", change: "+12.5%", trend: "up" as const },
-  { label: "Active Users", value: "24,892", change: "+8.3%", trend: "up" as const },
-  { label: "Conversion Rate", value: "3.42%", change: "+0.8%", trend: "up" as const },
-  { label: "Avg. Order Value", value: "$128", change: "-2.1%", trend: "down" as const },
-  { label: "Customer LTV", value: "$1,240", change: "+15.2%", trend: "up" as const },
-  { label: "Churn Rate", value: "2.1%", change: "-0.4%", trend: "up" as const },
+  { label: "Total Revenue", value: "$284,500", change: "+12.5%", trend: "up" as const, detail: "vs $252,800 last month", sparkData: [18, 22, 19, 25, 28, 24, 30, 32, 29, 35, 38, 42] },
+  { label: "Active Users", value: "24,892", change: "+8.3%", trend: "up" as const, detail: "1,204 new this week", sparkData: [15, 18, 16, 20, 19, 22, 21, 24, 23, 25, 27, 28] },
+  { label: "Conversion Rate", value: "3.42%", change: "+0.8%", trend: "up" as const, detail: "Above 3% target", sparkData: [2.1, 2.4, 2.8, 2.6, 3.0, 2.9, 3.1, 3.2, 3.0, 3.3, 3.4, 3.42] },
+  { label: "Avg. Order Value", value: "$128", change: "-2.1%", trend: "down" as const, detail: "Was $131 last month", sparkData: [135, 132, 138, 130, 134, 131, 129, 133, 128, 130, 127, 128] },
+  { label: "Customer LTV", value: "$1,240", change: "+15.2%", trend: "up" as const, detail: "Top 10% at $3,800+", sparkData: [850, 900, 920, 980, 1020, 1050, 1080, 1120, 1150, 1180, 1210, 1240] },
+  { label: "Churn Rate", value: "2.1%", change: "-0.4%", trend: "up" as const, detail: "Lowest in 6 months", sparkData: [3.2, 3.0, 2.8, 2.9, 2.7, 2.6, 2.5, 2.4, 2.3, 2.2, 2.15, 2.1] },
+];
+
+// ─── Additional Stats ───
+export const statsData = [
+  { label: "Email Open Rate", value: "42.8%", change: "+3.2%", trend: "up" as const, detail: "Best: Welcome series (68%)", sparkData: [35, 37, 36, 39, 38, 40, 41, 39, 42, 41, 43, 42.8] },
+  { label: "Social Engagement", value: "18.4K", change: "+22.1%", trend: "up" as const, detail: "Instagram leading (+34%)", sparkData: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 18.4] },
+  { label: "Cost per Lead", value: "$24.50", change: "-8.7%", trend: "up" as const, detail: "Down from $26.84", sparkData: [32, 30, 29, 28, 27, 26.5, 26, 25.5, 25, 24.8, 24.6, 24.5] },
+  { label: "MQL to SQL", value: "34.2%", change: "+5.1%", trend: "up" as const, detail: "682 SQLs this month", sparkData: [25, 26, 27, 28, 29, 30, 31, 32, 33, 33.5, 34, 34.2] },
+  { label: "Pipeline Value", value: "$1.2M", change: "+18.4%", trend: "up" as const, detail: "42 deals in pipeline", sparkData: [700, 750, 800, 850, 900, 920, 950, 1000, 1050, 1100, 1150, 1200] },
+  { label: "NPS Score", value: "72", change: "+4", trend: "up" as const, detail: "Promoters: 58%", sparkData: [60, 62, 63, 64, 66, 67, 68, 69, 70, 71, 71, 72] },
 ];

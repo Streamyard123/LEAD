@@ -29,6 +29,7 @@ import ParallelCoordinatesChart from "@/components/charts/ParallelCoordinatesCha
 
 import {
   kpiData,
+  statsData,
   revenueByChannel,
   trafficTrend,
   trafficSources,
@@ -62,10 +63,17 @@ export default function DashboardPage() {
         subtitle="Marketing performance dashboard — Customer journey analytics"
       />
 
-      {/* KPI Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+      {/* Primary KPI Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-6">
         {kpiData.map((kpi, i) => (
           <KPICard key={kpi.label} {...kpi} delay={i * 60} />
+        ))}
+      </div>
+
+      {/* Secondary Stats Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
+        {statsData.map((stat, i) => (
+          <KPICard key={stat.label} {...stat} delay={(i + 6) * 60} />
         ))}
       </div>
 
