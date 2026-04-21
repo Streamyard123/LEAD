@@ -479,6 +479,105 @@ export const geoData = [
   { id: "PHL", value: 4800 },
 ];
 
+// ─── Sigma.js Marketing Network Graph ───
+export const sigmaGraphNodes = [
+  // Marketing channels
+  { id: "website", label: "Website", group: "channel", size: 18 },
+  { id: "blog", label: "Blog", group: "channel", size: 14 },
+  { id: "social", label: "Social Media", group: "channel", size: 16 },
+  { id: "email", label: "Email Marketing", group: "channel", size: 15 },
+  { id: "ppc", label: "PPC Ads", group: "channel", size: 14 },
+  { id: "seo", label: "SEO", group: "channel", size: 13 },
+  { id: "affiliates", label: "Affiliates", group: "channel", size: 10 },
+  { id: "pr", label: "PR & Media", group: "channel", size: 11 },
+  // Content types
+  { id: "video", label: "Video Content", group: "content", size: 12 },
+  { id: "podcast", label: "Podcast", group: "content", size: 9 },
+  { id: "webinar", label: "Webinars", group: "content", size: 10 },
+  { id: "case-study", label: "Case Studies", group: "content", size: 10 },
+  { id: "whitepaper", label: "Whitepapers", group: "content", size: 8 },
+  { id: "infographic", label: "Infographics", group: "content", size: 8 },
+  // Audience segments
+  { id: "enterprise", label: "Enterprise", group: "audience", size: 14 },
+  { id: "smb", label: "SMB", group: "audience", size: 13 },
+  { id: "startup", label: "Startups", group: "audience", size: 11 },
+  { id: "developer", label: "Developers", group: "audience", size: 12 },
+  { id: "marketer", label: "Marketers", group: "audience", size: 12 },
+  { id: "executive", label: "Executives", group: "audience", size: 10 },
+  // Conversion points
+  { id: "trial", label: "Free Trial", group: "conversion", size: 15 },
+  { id: "demo", label: "Demo Request", group: "conversion", size: 13 },
+  { id: "signup", label: "Newsletter Signup", group: "conversion", size: 11 },
+  { id: "download", label: "Resource Download", group: "conversion", size: 10 },
+  { id: "purchase", label: "Purchase", group: "conversion", size: 16 },
+  // Platforms
+  { id: "linkedin", label: "LinkedIn", group: "platform", size: 12 },
+  { id: "twitter", label: "Twitter/X", group: "platform", size: 11 },
+  { id: "youtube", label: "YouTube", group: "platform", size: 13 },
+  { id: "instagram", label: "Instagram", group: "platform", size: 10 },
+  { id: "tiktok", label: "TikTok", group: "platform", size: 9 },
+];
+
+export const sigmaGraphEdges = [
+  // Channel to content connections
+  { source: "website", target: "blog", weight: 8 },
+  { source: "website", target: "case-study", weight: 5 },
+  { source: "blog", target: "seo", weight: 7 },
+  { source: "social", target: "video", weight: 8 },
+  { source: "social", target: "infographic", weight: 5 },
+  { source: "email", target: "webinar", weight: 6 },
+  { source: "email", target: "whitepaper", weight: 4 },
+  { source: "ppc", target: "website", weight: 9 },
+  { source: "seo", target: "website", weight: 10 },
+  { source: "pr", target: "podcast", weight: 4 },
+  { source: "affiliates", target: "website", weight: 5 },
+  // Content to audience
+  { source: "blog", target: "developer", weight: 7 },
+  { source: "blog", target: "marketer", weight: 6 },
+  { source: "case-study", target: "enterprise", weight: 8 },
+  { source: "case-study", target: "executive", weight: 6 },
+  { source: "webinar", target: "smb", weight: 5 },
+  { source: "webinar", target: "marketer", weight: 7 },
+  { source: "whitepaper", target: "enterprise", weight: 6 },
+  { source: "whitepaper", target: "executive", weight: 5 },
+  { source: "video", target: "startup", weight: 6 },
+  { source: "video", target: "developer", weight: 7 },
+  { source: "podcast", target: "executive", weight: 4 },
+  { source: "infographic", target: "marketer", weight: 5 },
+  // Audience to conversion
+  { source: "enterprise", target: "demo", weight: 9 },
+  { source: "enterprise", target: "purchase", weight: 7 },
+  { source: "smb", target: "trial", weight: 8 },
+  { source: "smb", target: "purchase", weight: 6 },
+  { source: "startup", target: "trial", weight: 9 },
+  { source: "startup", target: "signup", weight: 5 },
+  { source: "developer", target: "trial", weight: 8 },
+  { source: "developer", target: "download", weight: 6 },
+  { source: "marketer", target: "demo", weight: 6 },
+  { source: "marketer", target: "signup", weight: 7 },
+  { source: "executive", target: "demo", weight: 8 },
+  // Platform connections
+  { source: "social", target: "linkedin", weight: 8 },
+  { source: "social", target: "twitter", weight: 7 },
+  { source: "social", target: "instagram", weight: 6 },
+  { source: "social", target: "tiktok", weight: 4 },
+  { source: "video", target: "youtube", weight: 9 },
+  { source: "youtube", target: "developer", weight: 5 },
+  { source: "linkedin", target: "enterprise", weight: 7 },
+  { source: "linkedin", target: "executive", weight: 6 },
+  { source: "twitter", target: "developer", weight: 6 },
+  { source: "twitter", target: "startup", weight: 5 },
+  { source: "instagram", target: "smb", weight: 4 },
+  { source: "tiktok", target: "startup", weight: 3 },
+  // Cross-connections
+  { source: "trial", target: "purchase", weight: 7 },
+  { source: "demo", target: "purchase", weight: 8 },
+  { source: "signup", target: "email", weight: 6 },
+  { source: "download", target: "email", weight: 5 },
+  { source: "blog", target: "video", weight: 3 },
+  { source: "podcast", target: "blog", weight: 3 },
+];
+
 // ─── Additional Stats ───
 export const statsData = [
   { label: "Email Open Rate", value: "42.8%", change: "+3.2%", trend: "up" as const, detail: "Best: Welcome series (68%)", sparkData: [35, 37, 36, 39, 38, 40, 41, 39, 42, 41, 43, 42.8] },

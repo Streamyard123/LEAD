@@ -27,6 +27,9 @@ import SwarmplotChart from "@/components/charts/SwarmplotChart";
 import MarimekkoChart from "@/components/charts/MarimekkoChart";
 import ParallelCoordinatesChart from "@/components/charts/ParallelCoordinatesChart";
 import ChoroplethChart from "@/components/charts/ChoroplethChart";
+import dynamic from "next/dynamic";
+
+const SigmaGraph = dynamic(() => import("@/components/charts/SigmaGraph"), { ssr: false });
 
 import {
   kpiData,
@@ -55,6 +58,8 @@ import {
   marimekkoData,
   parallelData,
   geoData,
+  sigmaGraphNodes,
+  sigmaGraphEdges,
 } from "@/lib/mockData";
 
 export default function DashboardPage() {
@@ -88,6 +93,18 @@ export default function DashboardPage() {
           className="animate-fade-in-up opacity-0 stagger-1"
         >
           <ChoroplethChart data={geoData} maxValue={100000} label="users" />
+        </ChartCard>
+      </div>
+
+      {/* Interactive Marketing Network Graph (Sigma.js + Graphology) */}
+      <div className="mb-6">
+        <ChartCard
+          title="Marketing Network Analytics"
+          subtitle="Interactive graph powered by Sigma.js + Graphology — Drag nodes, click to inspect, search, toggle communities, run ForceAtlas2 layout"
+          height="h-[550px]"
+          className="animate-fade-in-up opacity-0 stagger-2"
+        >
+          <SigmaGraph nodes={sigmaGraphNodes} edges={sigmaGraphEdges} />
         </ChartCard>
       </div>
 
