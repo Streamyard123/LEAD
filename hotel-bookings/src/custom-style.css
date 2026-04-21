@@ -1,0 +1,13 @@
+#observablehq-footer {
+  display: none !important;
+}
+
+footer {
+  display: none !important;
+}
+
+/* Hide any "Built with Observable" text */
+[class*="footer"],
+[id*="footer"] {
+  display: none !important;
+}
