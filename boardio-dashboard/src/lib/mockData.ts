@@ -445,6 +445,40 @@ export const kpiData = [
   { label: "Churn Rate", value: "2.1%", change: "-0.4%", trend: "up" as const, detail: "Lowest in 6 months", sparkData: [3.2, 3.0, 2.8, 2.9, 2.7, 2.6, 2.5, 2.4, 2.3, 2.2, 2.15, 2.1] },
 ];
 
+// ─── Choropleth / Geo Data ───
+export const geoData = [
+  { id: "USA", value: 98200 },
+  { id: "GBR", value: 42800 },
+  { id: "CAN", value: 31500 },
+  { id: "DEU", value: 28900 },
+  { id: "FRA", value: 25400 },
+  { id: "AUS", value: 22100 },
+  { id: "BRA", value: 18700 },
+  { id: "IND", value: 45200 },
+  { id: "JPN", value: 16800 },
+  { id: "CHN", value: 52400 },
+  { id: "KOR", value: 14200 },
+  { id: "MEX", value: 11800 },
+  { id: "ESP", value: 15600 },
+  { id: "ITA", value: 13900 },
+  { id: "NLD", value: 12400 },
+  { id: "SWE", value: 9800 },
+  { id: "NOR", value: 7200 },
+  { id: "SGP", value: 8500 },
+  { id: "ARE", value: 6800 },
+  { id: "ZAF", value: 5400 },
+  { id: "NGA", value: 4200 },
+  { id: "ARG", value: 7800 },
+  { id: "COL", value: 5100 },
+  { id: "IDN", value: 9200 },
+  { id: "THA", value: 6100 },
+  { id: "POL", value: 8900 },
+  { id: "TUR", value: 7600 },
+  { id: "RUS", value: 14800 },
+  { id: "ISR", value: 5800 },
+  { id: "PHL", value: 4800 },
+];
+
 // ─── Additional Stats ───
 export const statsData = [
   { label: "Email Open Rate", value: "42.8%", change: "+3.2%", trend: "up" as const, detail: "Best: Welcome series (68%)", sparkData: [35, 37, 36, 39, 38, 40, 41, 39, 42, 41, 43, 42.8] },

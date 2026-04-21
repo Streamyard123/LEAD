@@ -26,6 +26,7 @@ import RadialBarChart from "@/components/charts/RadialBarChart";
 import SwarmplotChart from "@/components/charts/SwarmplotChart";
 import MarimekkoChart from "@/components/charts/MarimekkoChart";
 import ParallelCoordinatesChart from "@/components/charts/ParallelCoordinatesChart";
+import ChoroplethChart from "@/components/charts/ChoroplethChart";
 
 import {
   kpiData,
@@ -53,6 +54,7 @@ import {
   swarmplotData,
   marimekkoData,
   parallelData,
+  geoData,
 } from "@/lib/mockData";
 
 export default function DashboardPage() {
@@ -75,6 +77,18 @@ export default function DashboardPage() {
         {statsData.map((stat, i) => (
           <KPICard key={stat.label} {...stat} delay={(i + 6) * 60} />
         ))}
+      </div>
+
+      {/* Global User Distribution Map */}
+      <div className="mb-6">
+        <ChartCard
+          title="Global User Distribution"
+          subtitle="Active users by country — Choropleth geospatial visualization"
+          height="h-[450px]"
+          className="animate-fade-in-up opacity-0 stagger-1"
+        >
+          <ChoroplethChart data={geoData} maxValue={100000} label="users" />
+        </ChartCard>
       </div>
 
       {/* Row 1: Revenue Bar + Traffic Line */}
